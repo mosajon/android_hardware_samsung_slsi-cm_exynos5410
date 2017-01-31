@@ -26,6 +26,11 @@ exynos5410_dirs := \
 	libsecurepath \
 	mobicore
 
+ifeq ($(BOARD_USES_VIRTUAL_DISPLAY), true)
+exynos5410_dirs += \
+	libvirtualdisplaymodule
+endif	
+
 ifeq ($(BOARD_USE_SOC_LIBCAMERA),true)
 exynos5410_dirs += libcamera
 endif
